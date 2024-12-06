@@ -23,22 +23,11 @@ public class CalculatorController {
                 String operator = view.getSelectedOperator();
 
                 switch (operator) {
-                    case "+":
-                        view.setResult(String.valueOf(model.add(firstNumber, secondNumber)));
-                        break;
-                    case "-":
-                        view.setResult(String.valueOf(model.subtract(firstNumber, secondNumber)));
-                        break;
-                    case "*":
-                        view.setResult(String.valueOf(model.multiply(firstNumber, secondNumber)));
-                        break;
-                    case "/":
-                        view.setResult(String.valueOf(model.divide(firstNumber, secondNumber)));
-                        break;
-
-                    default:
-                        view.setResult("Unknown operator");
-                        break;
+                    case "+" -> view.setResult(String.valueOf(model.add(firstNumber, secondNumber)));
+                    case "-" -> view.setResult(String.valueOf(model.subtract(firstNumber, secondNumber)));
+                    case "*" -> view.setResult(String.valueOf(model.multiply(firstNumber, secondNumber)));
+                    case "/" -> view.setResult(String.valueOf(model.divide(firstNumber, secondNumber)));
+                    default -> view.setResult("Unknown operator");
                 }
             } catch (NumberFormatException ex) {
                 view.setResult("Invalid input");

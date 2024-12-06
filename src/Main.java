@@ -3,6 +3,6 @@ public class Main {
         CalculatorView view = new CalculatorView();
 
         CalculatorModel model = new CalculatorModel();
-        CalculatorController controller = new CalculatorController(view, model);
+        new CalculatorController(view, model);
     }
 }

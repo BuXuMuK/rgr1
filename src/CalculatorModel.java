@@ -13,7 +13,7 @@ public class CalculatorModel {
 
     public double divide(double a, double b) {
         if (b == 0) {
-            throw new ArithmeticException("Division by zero!");
+            throw new ArithmeticException("Делить на ноль нельзя!");
         }
         return a / b;
     }
